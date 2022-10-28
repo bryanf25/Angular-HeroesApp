@@ -1,0 +1,28 @@
+
+<div fxLayout.lg="row" fxLayout.xs="column" fxLayoutGap="30px">
+
+  <button mat-button class="light-button" routerLink="/heroes/listado">
+
+    <mat-icon color="warn" fontIcon="keyboard_backspace"></mat-icon>
+
+  </button>
+  <div fxFlex.lg="50">
+    <h1>{{heroe.superhero}} <small> - {{heroe.alter_ego }}</small></h1>
+    <mat-divider></mat-divider>
+    <br>
+    <img [src]="heroe | imagenHeroe">
+  </div>
+
+  <div fxFlex.lg="50">
+    <h1> {{heroe.publisher}}</h1>
+    <mat-divider></mat-divider>
+    <mat-list>
+      <mat-list-item>{{heroe.first_appearance}}</mat-list-item>
+      <mat-list-item>{{heroe.characters}}</mat-list-item>
+      <mat-list-item>{{heroe.publisher}}</mat-list-item>
+      <mat-list-item>{{heroe.alter_ego}}</mat-list-item>
+    </mat-list>
+  </div>
+  <br>
+
+</div>

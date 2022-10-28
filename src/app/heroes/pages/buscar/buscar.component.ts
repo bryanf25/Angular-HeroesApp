@@ -6,6 +6,14 @@ import { HeroesService } from '../../services/heroes.service';
 @Component({
   selector: 'app-buscar',
   templateUrl: './buscar.component.html',
+  styles: [
+    `
+      mat-card {
+        margin: 15%;
+        margin-top: 0%;
+      }
+    `,
+  ],
 })
 export class BuscarComponent implements OnInit {
   termino: string = '';
@@ -17,9 +25,11 @@ export class BuscarComponent implements OnInit {
   ngOnInit(): void {}
 
   buscando() {
-    this.heroesService.getSugerencias(this.termino.trim()).subscribe((response) => {
-      this.heroes = response;
-    });
+    this.heroesService
+      .getSugerencias(this.termino.trim())
+      .subscribe((response) => {
+        this.heroes = response;
+      });
   }
 
   opcionSeleccionada(event: MatAutocompleteSelectedEvent) {

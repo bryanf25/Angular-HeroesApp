@@ -6,8 +6,8 @@
 
 
 <ng-template #divHeroe>
-
-  <div fxLayout.lg="row" fxLayout.xs="column" fxLayoutGap="30px">
+<app-heroe-descripcion-tarjeta [heroe]="heroe"></app-heroe-descripcion-tarjeta>
+  <!-- <div fxLayout.lg="row" fxLayout.xs="column" fxLayoutGap="30px">
 
     <button mat-button class="light-button" routerLink="/heroes/listado">
 
@@ -33,16 +33,7 @@
     </div>
     <br>
 
+  </div> -->
 
-  </div>
-  <!-- <mat-card class="example-card">
-    <mat-card-title-group>
-      <mat-card-title>{{heroe.superhero}}</mat-card-title>
-      <mat-card-subtitle>{{heroe.alter_ego}}</mat-card-subtitle>
-      <img mat-card-xl-image [src]="heroe | imagenHeroe">
-    </mat-card-title-group>
-    <mat-card-content>
-      Caracteres: {{heroe.characters | titlecase}}
-    </mat-card-content>
-  </mat-card>
-</ng-template> -->
+</ng-template>
+

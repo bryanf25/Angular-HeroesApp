@@ -11,6 +11,7 @@ import { BuscarComponent } from './pages/buscar/buscar.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { HeroeTarjetaComponent } from './components/heroe-tarjeta/heroe-tarjeta.component';
 import { ImagenHeroePipe } from './pipes/imagen-heroe.pipe';
+import { HeroeDescripcionTarjetaComponent } from './components/heroe-descripcion-tarjeta/heroe-descripcion-tarjeta.component';
 
 
 
@@ -22,7 +23,8 @@ import { ImagenHeroePipe } from './pipes/imagen-heroe.pipe';
     ListadoComponent,
     BuscarComponent,
     HeroeTarjetaComponent,
-    ImagenHeroePipe
+    ImagenHeroePipe,
+    HeroeDescripcionTarjetaComponent
   ],
   imports: [
     CommonModule,

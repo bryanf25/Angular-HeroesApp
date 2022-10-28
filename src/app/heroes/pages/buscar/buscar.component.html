@@ -30,7 +30,7 @@
   </div>
 
 
-  <div>
-
-    <pre>{{heroeSeleccionado | json}}</pre>
-  </div>
+  <mat-card *ngIf="(heroeSeleccionado)" fxLayout="column">
+<app-heroe-descripcion-tarjeta  [heroe]="heroeSeleccionado"></app-heroe-descripcion-tarjeta>
+    <!-- <pre>{{heroeSeleccionado | json}}</pre> -->
+  </mat-card>
