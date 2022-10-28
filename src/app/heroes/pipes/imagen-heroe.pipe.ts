@@ -1,4 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
+import { environment } from 'src/environments/environment';
 import { Heroe } from '../interfaces/heroe.interface';
 
 @Pipe({
@@ -7,8 +8,8 @@ import { Heroe } from '../interfaces/heroe.interface';
 export class ImagenHeroePipe implements PipeTransform {
 
   transform(heroe: Heroe): string {
-    const path = `assets/heroes/${heroe.id}.jpg`;
-    return path;
+  const path = (!heroe.alt_img) ? `assets/heroes/${heroe.id}.jpg` : heroe.alt_img;
+   return (!heroe.id ) ? environment.imageDefaultUrl : path;
   }
 
 }

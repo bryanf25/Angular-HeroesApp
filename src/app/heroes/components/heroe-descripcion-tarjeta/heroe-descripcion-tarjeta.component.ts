@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Heroe } from '../../interfaces/heroe.interface';
+import { Location } from "@angular/common";
 
 @Component({
   selector: 'app-heroe-descripcion-tarjeta',
@@ -15,7 +16,11 @@ import { Heroe } from '../../interfaces/heroe.interface';
 export class HeroeDescripcionTarjetaComponent implements OnInit {
   @Input() heroe!: Heroe;
 
-  constructor() {}
+  constructor( private _location: Location) {}
 
   ngOnInit(): void {}
+
+  irAtras(){
+    this._location.back();
+  }
 }

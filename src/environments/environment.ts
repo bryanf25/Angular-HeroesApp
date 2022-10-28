@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  baseUrl: 'http://localhost:3000/heroes'
+  baseUrl: 'http://localhost:3000/heroes',
+  imageDefaultUrl: 'assets/no-image.png'
 };
 
 /*
