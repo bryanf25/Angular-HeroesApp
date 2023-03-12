@@ -8,7 +8,7 @@ import { Heroe } from '../interfaces/heroe.interface';
   providedIn: 'root',
 })
 export class HeroesService {
-  private url: string = environment.baseUrl;
+  private url: string = `${environment.baseUrl}/heroes`;
 
   constructor(private http: HttpClient) {}
 

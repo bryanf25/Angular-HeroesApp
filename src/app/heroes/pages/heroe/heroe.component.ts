@@ -25,16 +25,16 @@ export class HeroeComponent implements OnInit {
   constructor(
     private _activateRoute: ActivatedRoute,
     private _heroesService: HeroesService
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.idHeroe = this._activateRoute.snapshot.paramMap.get('id');
     this._heroesService.getHeroeDetails(this.idHeroe)
-    .pipe(delay(2000))
-    .subscribe((response) => {
-      this.heroe = response;
-      this.heroe.superhero
-      console.log(response.id);
-    });
+      .pipe(delay(2000))
+      .subscribe((response) => {
+        this.heroe = response;
+        this.heroe.superhero
+        console.log(response.id);
+      });
   }
 }
